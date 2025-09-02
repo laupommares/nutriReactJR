@@ -3,7 +3,7 @@ export default function Hero() {
     <section className="relative flex justify-center bg-white pt-40 pb-24 overflow-hidden max-h-[90vh]">
       {/* Fondo ilustrado */}
       <div
-        className="absolute inset-0 bg-[url('/bg-dibujos.svg')] bg-no-repeat bg-[length:600px] bg-right-top opacity-20 pointer-events-none"
+        className="absolute inset-0 bg-no-repeat bg-[length:600px] bg-right-top opacity-20 pointer-events-none"
       ></div>
 
       <div className="container relative z-10 flex flex-col md:flex-row items-center gap-12">
