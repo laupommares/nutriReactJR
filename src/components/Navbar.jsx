@@ -1,14 +1,15 @@
 import { useState } from "react";
+import { Link } from "react-scroll";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const currentPath = window.location.pathname;
 
   const menuOptions = {
-    Home: "/",
-    About: "/about",
-    Services: "/services",
-    Contact: "/contact",
+    Inicio: "/inicio",
+    "Sobre mi": "/about-me",
+    Programas: "/programs",
   };
 
   const isActive = (route) => {
@@ -26,14 +27,16 @@ const Navbar = () => {
           <ul className="flex space-x-4 m-6 max-lg:hidden">
             {Object.entries(menuOptions).map(([option, route]) => (
               <li key={option} className="flex text-sm font-raleway items-center font-semibold">
-                <a
-                  href={route}
-                  className={`w-full text-base h-full hover:bg-white rounded-md px-3 py-2 flex items-center text-dark font-serif ${
-                    isActive(route) ? "text-dark bg-white" : ""
-                  }`}
+                <Link
+                  to={route.replace("/", "")} // "about-me" o "programs"
+                  smooth={true}               // animación suave
+                  duration={500}              // duración en ms
+                  offset={-80}                // altura fija del navbar
+                  className={`w-full text-base h-full hover:bg-white rounded-md px-3 py-2 flex items-center text-dark font-serif cursor-pointer ${isActive(route) ? "text-dark bg-white" : ""
+                    }`}
                 >
                   {option}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -53,9 +56,8 @@ const Navbar = () => {
                   <li key={option} className="flex text-sm font-raleway items-center font-semibold">
                     <a
                       href={route}
-                      className={`w-full text-base h-full hover:bg-white p-4 flex items-center text-dark font-serif ${
-                        isActive(route) ? "text-dark bg-white" : ""
-                      }`}
+                      className={`w-full text-base h-full hover:bg-white p-4 flex items-center text-dark font-serif ${isActive(route) ? "text-dark bg-white" : ""
+                        }`}
                     >
                       {option}
                     </a>

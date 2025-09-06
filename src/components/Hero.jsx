@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative flex justify-center bg-white pt-40 pb-24 overflow-hidden max-h-[90vh]">
+    <section id="inicio" className="relative flex justify-center bg-white pt-40 pb-24 overflow-hidden max-h-[90vh]">
       {/* Fondo ilustrado */}
       <div
         className="absolute inset-0 bg-no-repeat bg-[length:600px] bg-right-top opacity-20 pointer-events-none"

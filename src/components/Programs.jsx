@@ -1,6 +1,6 @@
 export default function Programs() {
   return (
-    <div id="programas">
+    <div id="programs">
       <div className="bg-dark-gray h-4"></div>
       <div className="relative isolate m-auto bg-white px-6 py-20 lg:px-8">
         {/* Fondo con gradiente */}
